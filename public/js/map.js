@@ -6,7 +6,7 @@ function initialize_gmaps() {
         center: myLatlng,
         zoom: 13,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
-        scrollwheel: false,
+        scrollwheel: true,
         styles: styleArr
     };
     // get the maps div's HTML obj
@@ -20,7 +20,7 @@ function initialize_gmaps() {
     });
     
     // draw some locations
-    var hotelLocation = [40.705137, -74.007624];
+    var hotelLocation = [40.704000, -74.004000];
     var restaurantLocations = [
         [40.705137, -74.013940],
         [40.708475, -74.010846]

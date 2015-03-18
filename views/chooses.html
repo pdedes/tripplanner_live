@@ -2,30 +2,30 @@
 	<div class="panel-body">
 		<div>
 			<h4>Hotels</h4>
-			<select>
+			<select id="myhotels">
 			{% for hotel in all_hotels %}
 				<option>{{ hotel.name }}</option>
 			{% endfor %}
 			</select>
-			<button class="btn-primary btn btn-xs btn-circle pull-right">+</button>
+			<button id="hoteladd" class="btn-primary btn btn-xs btn-circle pull-right">+</button>
 		</div>
 		<div>
 			<h4>Restaurants</h4>
-			<select>
+			<select id="myrestaurants">
 			{% for restaurant in all_restaurants %}
 				<option>{{ restaurant.name }}</option>
 			{% endfor %}
 			</select>
-			<button class="btn-primary btn btn-xs btn-circle pull-right">+</button>
+			<button id="restaurantadd" class="btn-primary btn btn-xs btn-circle pull-right">+</button>
 		</div>
 		<div>
 			<h4>Things To Do</h4>
-			<select>
+			<select id="things">
 			{% for thingToDo in all_things_to_do %}
 				<option>{{ thingToDo.name }}</option>
 			{% endfor %}
 			</select>
-			<button class="btn-primary btn btn-xs btn-circle pull-right">+</button>
+			<button id="thingadd" class="btn-primary btn btn-xs btn-circle pull-right">+</button>
 		</div>
 	</div>
 </div>
