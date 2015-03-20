@@ -1,3 +1,5 @@
+var marker;
+// Naughty coding is good.
 
 $(document).ready(function(){
 
@@ -13,8 +15,11 @@ $(document).ready(function(){
 
 		// var geo = new google.maps.LatLng(latLngStr);
 		// console.log(geo.toString());
+		if(marker){
+			marker.setMap(null);
+		}
 
-		var marker = new google.maps.Marker({
+		marker = new google.maps.Marker({
 	        position: {lat: parseFloat(latLngArr[0]) , lng: parseFloat(latLngArr[1])},
 	        map: map,
 	        title:select_hotel
