@@ -1,4 +1,6 @@
 var marker;
+var test;
+var temp;
 // Naughty coding is good.
 
 $(document).ready(function(){
@@ -37,6 +39,16 @@ $(document).ready(function(){
 
 	$('#thingadd').click(function(){
 		var select_thing = $( "#things option:selected" ).text();		
+	});
+
+	$('.hotel_target').on("click", ".remove", function(){
+		// event.preventDefault();
+		test = this;
+		temp = event.target;
+		console.log(test);
+
+		// console.log("prev sibling: ", this.prev().prev());
+		// console.log(test.sibling());
 	});
 
 
