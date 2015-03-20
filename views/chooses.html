@@ -4,7 +4,7 @@
 			<h4>Hotels</h4>
 			<select id="myhotels">
 			{% for hotel in all_hotels %}
-				<option>{{ hotel.name }}</option>
+				<option value="{{hotel.place[0].location}}">{{ hotel.name }}</option>
 			{% endfor %}
 			</select>
 			<button id="hoteladd" class="btn-primary btn btn-xs btn-circle pull-right">+</button>

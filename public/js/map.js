@@ -1,4 +1,7 @@
-function initialize_gmaps() {
+var map;
+
+$(document).ready(function() {
+
     // initialize new google maps LatLng object
     var myLatlng = new google.maps.LatLng(40.705786,-74.007672);
     // set the map options hash
@@ -12,51 +15,50 @@ function initialize_gmaps() {
     // get the maps div's HTML obj
     var map_canvas_obj = document.getElementById("map-canvas");
     // initialize a new Google Map with the options
-    var map = new google.maps.Map(map_canvas_obj, mapOptions);
+    map = new google.maps.Map(map_canvas_obj, mapOptions);
     // Add the marker to the map
-    var marker = new google.maps.Marker({
-        position: myLatlng,
-        title:"Hello World!"
-    });
+    // var marker = new google.maps.Marker({
+    //     position: myLatlng,
+    //     title:"Hello World!"
+    // });
     
-    // draw some locations
-    var hotelLocation = [40.704000, -74.004000];
-    var restaurantLocations = [
-        [40.705137, -74.013940],
-        [40.708475, -74.010846]
-    ];
-    var thingToDoLocations = [
-        [40.716291, -73.995315],
-        [40.707119, -74.003602]
-    ];
-    function drawLocation (location, opts) {
-        if (typeof opts !== 'object') {
-            opts = {}
-        }
-        opts.position = new google.maps.LatLng(location[0], location[1]);
-        opts.map = map;
-        var marker = new google.maps.Marker(opts);
-    }
-    drawLocation(hotelLocation, {
-        // credit to: Matthias Stasiak https://mapicons.mapsmarker.com/author/matthias.stasiak/
-        icon: '/images/lodging_0star.png'
-    });
-    restaurantLocations.forEach(function (loc) {
-        drawLocation(loc, {
-            // credit to: Nico Mollet https://mapicons.mapsmarker.com/author/nico.mollet/
-            icon: '/images/restaurant.png'
-        });
-    });
-    thingToDoLocations.forEach(function (loc) {
-        drawLocation(loc, {
-            // credit to: Nico Mollet https://mapicons.mapsmarker.com/author/nico.mollet/
-            icon: '/images/star-3.png'
-        });
-    });
-}
-$(document).ready(function() {
-    initialize_gmaps();
+    // // draw some locations
+    // var hotelLocation = [40.704000, -74.004000];
+    // var restaurantLocations = [
+    //     [40.705137, -74.013940],
+    //     [40.708475, -74.010846]
+    // ];
+    // var thingToDoLocations = [
+    //     [40.716291, -73.995315],
+    //     [40.707119, -74.003602]
+    // ];
+    // function drawLocation (location, opts) {
+    //     if (typeof opts !== 'object') {
+    //         opts = {}
+    //     }
+    //     opts.position = new google.maps.LatLng(location[0], location[1]);
+    //     opts.map = map;
+    //     var marker = new google.maps.Marker(opts);
+    // }
+    // drawLocation(hotelLocation, {
+    //     // credit to: Matthias Stasiak https://mapicons.mapsmarker.com/author/matthias.stasiak/
+    //     icon: '/images/lodging_0star.png'
+    // });
+    // restaurantLocations.forEach(function (loc) {
+    //     drawLocation(loc, {
+    //         // credit to: Nico Mollet https://mapicons.mapsmarker.com/author/nico.mollet/
+    //         icon: '/images/restaurant.png'
+    //     });
+    // });
+    // thingToDoLocations.forEach(function (loc) {
+    //     drawLocation(loc, {
+    //         // credit to: Nico Mollet https://mapicons.mapsmarker.com/author/nico.mollet/
+    //         icon: '/images/star-3.png'
+    //     });
+    // });
+
 });
+
 var styleArr = [
     {
         "featureType": "landscape",
